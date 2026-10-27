@@ -72,7 +72,7 @@ int confirm(const char *prompt)
 int get_timestamp(char *out, size_t out_size)
 {
     time_t now;
-    struct tm *local;
+    const struct tm *local;
     if ((out == NULL) || (out_size < 20U)) {
         return 0;
     }
@@ -88,7 +88,7 @@ int get_timestamp(char *out, size_t out_size)
 void get_today(char *out)
 {
     time_t now;
-    struct tm *local;
+    const struct tm *local;
     if (out == NULL) {
         return;
     }

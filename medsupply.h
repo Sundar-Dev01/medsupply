@@ -77,19 +77,23 @@ int   confirm(const char *prompt);
 void  get_today(char *out);                 /* YYYY-MM-DD */
 int   get_timestamp(char *out, size_t out_size); /* YYYY-MM-DD HH:MM:SS */
 int   log_event(const char *event, const char *actor, const char *details);
-int   valid_date(const char *s);
+int valid_date(const char *date);
 int   days_until(const char *date);         /* days from today to date */
 int   contains_ci(const char *text, const char *key);
 
 /* ---------- filehandler.c (File Handling layer) ---------- */
 Item         *fh_load_items(int *count);
-int           fh_save_items(const Item *arr, int count);
+int           fh_save_items(const Item *array, int count);
+
 Request      *fh_load_requests(int *count);
-int           fh_save_requests(const Request *arr, int count);
+int           fh_save_requests(const Request *array, int count);
+
 Distribution *fh_load_history(int *count);
-int           fh_append_history(const Distribution *rec);
+int           fh_append_history(const Distribution *record);
+
 User         *fh_load_users(int *count);
-int           fh_save_users(const User *arr, int count);
+int           fh_save_users(const User *array, int count);
+
 void          fh_init_files(void);
 
 /* ---------- auth.c (login & user management) ---------- */
