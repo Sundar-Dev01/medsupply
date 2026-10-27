@@ -44,7 +44,7 @@ typedef struct {
     char requester[40];
     int  qty;
     int  status;
-    char date[11];
+    char date[20];
     char remarks[60];
     char created_by[24];   /* username that created the request */
 } Request;
@@ -56,7 +56,7 @@ typedef struct {
     char item_name[50];
     char recipient[40];
     int  qty;
-    char date[11];
+    char date[20];
     char issued_by[24];    /* username that issued the supplies */
 } Distribution;
 
